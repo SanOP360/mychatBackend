@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../database");
 
 const User = sequelize.define("User", {
-  // Changed from "Users" to "User" to match conventions
+  
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -19,7 +19,7 @@ const User = sequelize.define("User", {
   },
   phoneNo: {
     type: DataTypes.STRING, 
-    // allowNull: false,
+  
   },
   password: {
     type: DataTypes.STRING,
@@ -27,4 +27,6 @@ const User = sequelize.define("User", {
   },
 });
 
-module.exports = User;
+module.exports = User; 
+
+
