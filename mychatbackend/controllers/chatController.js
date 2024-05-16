@@ -15,3 +15,15 @@ exports.postMessage = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
+
+
+exports.getMessages=async (req,res)=>{
+  try{
+    const messages=await ChatMessage.findAll();
+
+    res.status(200).json({messages});
+  }catch(err){
+    console.log(err);
+    res.status(500).json({message:"Internal server error"});
+  }
+}

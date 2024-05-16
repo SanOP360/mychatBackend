@@ -5,4 +5,8 @@ const verifyUser = require("../middleware/auth");
 
 router.post("/message", verifyUser, ChatController.postMessage);
 
+
+router.get("/message", verifyUser, ChatController.getMessages);
+
+
 module.exports = router;
